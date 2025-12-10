@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaygı Nedir?</title>
+             <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="SHA_GÜVENLİK_ANAHTARI" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="SHA_GÜVENLİK_ANAHTARI" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        min-height: 100vh;
+    }
+
+          nav {
+        background-color: #F9F7FF;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        position: fixed;
+        z-index: 1000;
+        height: 70px;
+        top: 0;
+        left: 0;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        margin-left: 30px;
+    }
+
+    .logo-h1 {
+        font-family: "Encode Sans Condensed", sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .logo img {
+        width: 35px;
+        height: auto;
+       
+    }
+
+    .links {
+        display: none;
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin-right: 30px;
+        font-family: "Comfortaa", sans-serif; */
+    }
+
+    .links li {
+        list-style: none;
+    }
+
+    .links a{
+        text-decoration: none;
+        font-size: 16px;
+        color: black;
+        transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+        color: #BEADFA;
+    }
+
+
+    .links.active {
+        display: flex;
+        background-color: #F9F7FF;
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-family: "Encode Sans Condensed", sans-serif;
+    }
+
+    section {
+        padding: 90px 1rem 90px 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1100px;
+        background-color: #E8F9FF;
+        border-radius: 30px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kaygi-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #C7F0FF;
+        width: 100%;
+        padding: 15px;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .kaygi-header h1 {
+        margin-left: 30px;
+        font-size: 25px;
+    }
+
+    .close {
+        margin-right: 20px;
+        width: 38px;
+        height: auto;
+        transition: all 0.4s ease;
+    }
+
+    .close:hover {
+        /* transform: translateY(-5px); */
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .resim {
+        width: 95%;
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .resim img {
+        width: 450px;
+        height: 345px;
+    }
+
+    .yazi {
+        width: 95%;
+        background-color: white;
+        border-radius: 25px;
+        margin: 0 auto;
+        font-family: "Comfortaa", sans-serif;
+        padding: 25px 2rem 2rem 40px;
+        line-height: 27px;
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+
+    a {
+        color: #000;
+    }
+
+    h2 {
+        padding: 20px 0 20px 0;
+        font-size: 25px;
+    }
+
+    .liste{
+        list-style: none;
+        padding-left: 5px;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+
+
+            footer {
+        padding: 50px;
+        background-color: #FFF9E7;
+    }
+
+    .footer-cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #BEADFA;
+        padding-bottom: 30px;
+    }
+
+    .footer-cont p {
+        font-size: 15px;
+        font-family: "Comfortaa", sans-serif;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 15px;
+        margin-left: 30px;
+        font-family: "Encode Sans Condensed", sans-serif;
+    }
+
+    .footer-logo img {
+        width: 35px;
+        height: auto;
+    }
+
+    .footer-logo h1 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .social a i {
+        font-size: 25px;
+        margin-right: 15px;
+        color: #BEADFA;
+        transition: all 0.4s ease;
+    }
+
+    .social a:hover i {
+        transform: translateY(-10px);
+        color: #8f70ff;
+    }
+
+    footer .sena {
+        font-size: 14px;
+        padding-top: 35px;
+        font-family: "Comfortaa", sans-serif;
+        text-align: center;
+    }
+
+    .sena a {
+        text-decoration: none;
+        color: #BEADFA;
+        font-size: 16px;
+        transition: color 0.6s ease;
+    }
+
+    .sena a:hover {
+        color: #8f70ff;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .undraw-link {
+        text-decoration: none;
+        color: black;
+        opacity: 0.7;
+    }
+
+    .footer-bottom .sena,
+    .footer-bottom .undraw {
+        font-size: 14px;
+        color: #000;
+        opacity: 0.9;
+    }
+
+
+    @keyframes kalpAtis {
+        0%, 100% {transform: scale(1);}
+        50% {transform: scale(1.3);}
+    }
+
+    .kalp {
+        animation: kalpAtis 2s ease infinite;
+    }
+
+
+        @media (max-width: 768px) {
+        .resim img {
+            width: 310px;
+            height: 250px;
+        }
+
+        .kaygi-header h1 {
+            font-size: 20px;
+            margin-left: 12px;
+            padding: 8px;
+        }
+
+        .kaygi-header img {
+            margin-right: 15px;
+        }
+
+        .logo-h1 {
+            font-size: 25px;
+        }
+
+        .links {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            flex-direction: column;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name-info {
+            gap: 20px;
+            margin-left: 0;
+        }
+
+        .footer-cont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .social a i {
+           margin-left: 15px;
+        }
+
+        .footer-logo {
+           margin: 0;
+        }  
+    }
+
+
+
+
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./assets/kalp.svg"  class="kalp">
+            <h1 class="logo-h1">Mindora</h1>
+        </div>
+
+        <ul class="links">
+            <li><a href="#hakkımda">Hakkımda</a></li>
+            <li><a href="#hizmetler">Hizmetler</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="kaygi-header">
+                <h1>Kaygı Nedir? Günlük Hayatı Nasıl Etkiler?</h1>
+                <a href="./blog.html" title="Kapat"><img class="close" src="./assets/close_100dp_000_FILL0_wght400_GRAD0_opsz48.svg" alt=""></a>
+            </div>
+
+            <div class="resim">
+                <img src="./assets/kaygı.svg" alt="">
+            </div>
+
+            <div class="yazi">
+                <h2>⭐ Kaygı Nedir?</h2>
+                <p>Kaygı, gelecekte olabilir diye düşündüğümüz bir duruma karşı hissettiğimiz endişe, tedirginlik ve gerginlik halidir. Genelde tehlikeye karşı bizi hazırlayan doğal bir alarm sistemi gibi çalışır. Yani aslında kaygı kötü değildir; doz aşımı kötü.
+                Kısaca: <br> &nbsp;
+                <ul class="liste">
+                    <li>📌 Düşünce: “Ya kötü bir şey olursa?”</li> 
+                    <li>📌 Fiziksel: Kalp hızlanır, nefes değişir, eller terler.</li> 
+                    <li>📌 Duygu: Huzursuzluk, gerginlik.</li> 
+                </ul> 
+                &nbsp; <br>Beyin bize diyor ki: “Bir şeyler yolunda olmayabilir, tedbirli ol sen yine… ama abartmadan.”</p>
+
+                <h2>⭐ Kaygı Neden Olur?</h2> 
+
+                <p>Kaygının ortaya çıkmasının bir sürü nedeni olabilir:
+                    &nbsp;  
+                <ul class="liste">
+                    <li>🧿 Gelecek belirsizliği</li>
+                    <li>🧿 Aşırı sorumluluk yükü</li>
+                    <li>🧿 Travmalar veya olumsuz deneyimler</li>
+                    <li>🧿 Sosyal medya kıyaslamaları (Z kuşağının mini boss’u)</li>
+                    <li>🧿 Biyolojik ve genetik etkenler</li>
+                    <li>🧿 Stresli yaşam tarzı</li>
+                </ul>
+
+               &nbsp; <br> Bu etkenler birleşince beyin diyor: “Sana biraz kaygı bırakayım da boş durma.”
+                </p>
+
+                <h2>⭐ Belirtileri Nelerdir?</h2>
+
+                <ul class="liste">
+                    <li>❓ Kalp çarpıntısı</li>
+                    <li>❓ Sürekli düşünme</li>
+                    <li>❓ Uyku sorunları</li>
+                    <li>❓ Odaklanmada zorlanma</li>
+                </ul> &nbsp;
+
+                <p>Zihnin hâlâ “ya kötü bir şey olursa” diyorsa, kaygı sahneye çıkmış demektir.</p>
+
+                <h2>⭐ Kaygı Ne Zaman Problem Olur?</h2>
+                <p>Kaygı tamamen yok olmaz; olmasın da zaten. Ama:</p> 
+                <ul class="liste">
+                    <li>📉 Günlük yaşantını bozuyorsa,</li>
+                    <li>📉 Sosyal ilişkilerini etkiliyorsa,</li>
+                    <li>📉 Sürekli tetikte hissediyorsan,</li>
+                    <li>📉 Yataktan kalkmak bile zor geliyorsa…</li>
+                </ul> &nbsp;
+                <p>Artık profesyonel destek düşünmenin zamanı gelmiş olabilir. Destek almak zayıflık değil, bildiğin level atlamak.</p>
+
+                <h2>⭐ Kaygıyla Nasıl Başa Çıkılır?</h2>
+                <p>Hadi gel biraz da çözüm konuşalım. Çünkü Z kuşağı olarak drama seviyoruz ama çözüm üretmeyi daha çok seviyoruz. &nbsp;
+
+                <ul class="liste">
+                   &nbsp; <li><strong>✔ 1. Nefes Egzersizleri</strong> <br> <p>Beynin “acil durum” modunu kapatan en hızlı yöntem.
+                    4 saniye nefes al – 4 saniye tut – 4 saniye ver.
+                    Baya reboot atıyor.</p></li> &nbsp;
+
+                    <li> <strong>✔ 2. Gerçeklik Kontrolü</strong> <br> <p>Kendine sor:
+                    “Bu düşündüğüm şey şu an oluyor mu, yoksa ben mi yazıyorum bu senaryoyu?”
+                    %80’i senaryo, kabul edelim.</p></li> &nbsp;
+
+                    <li><strong>✔ 3. Günlük Tutmak</strong> <br> <p>Kafadaki düşünceler Word dosyası gibi; yazınca hafifliyor.</p> </li> &nbsp;
+
+                    <li><strong>✔ 4. Telefon ve Sosyal Medya Detox’u</strong> <br> <p>Şu “herkes hayatının en güzel anını yaşıyor” algısı var ya…
+                    Yok öyle bir dünya.</p> </li> &nbsp;
+
+                    <li> <strong>✔ 5. Rutine Sahip Olmak</strong> <br> <p>Uyku, yemek, çalışma düzeni = Kaygısız yaşam değil ama daha az kaotik yaşam.</p></li> &nbsp;
+
+                    <li><strong>✔ 6. Profesyonel Destek</strong> <br> <p>Psikolojik danışman desteği almak, oyundaki rehber karakterle konuşmak gibi. Seni yönlendiriyor, bakış açını genişletiyor.</p></li> &nbsp;
+                </ul>
+                </p>
+
+                <h2>⭐ Kaygı Normaldir: Bunu Unutma</h2>
+
+                <p>Kaygı hissetmek seni “problemli” yapmaz. Zaten hepimiz kaygılıyız ama kimse göstermiyor.
+                    Mühim olan:
+                    Kaygıyı yönetebilmek, onun seni yönetmesine izin vermemek.
+
+                    Ve unutma, insan dediğin dizi finali gibi: Hep biraz belirsizlik olacak.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-cont">
+            <div class="footer-logo">
+                <img src="./assets/kalp.svg" class="kalp" alt="">
+                <h1>Mindora</h1>
+            </div>
+            
+            <p>Ruhsal sağlık ve kişisel gelişimde güvendiğiniz ortağınız.</p>
+            <div class="social">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </div> 
+        </div>
+
+        <div class="footer-bottom">
+            <p class="sena">Made by <a href="https://www.instagram.com/senanurbuyuksolak/" title="click ♡" target="_blank" rel="noopener">Sena</a> ♡</p>
+            <p class="undraw">Illustrations by <a href="https://undraw.co" target="_blank" rel="noopener" class="undraw-link">unDraw</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
